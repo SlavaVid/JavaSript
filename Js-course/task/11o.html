@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11o</title>
+  </head>
+  <body></body>
+  <script>
+    const listofNames = ["hello", "search", "good", "search"];
+
+    function wordSearch(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    console.log(wordSearch(["dad", "mom", "hello"], "hello"));
+    console.log(wordSearch(["dad", "mom", "hello"], "hello"));
+  </script>
+</html>

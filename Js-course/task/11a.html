@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const ara = ["a", "b", "c", "d", "e"];
+    /*
+    function lastArray(array) {
+      const lastIndex = array.length - 1;
+      return array[lastIndex];
+    }
+
+    console.log(lastArray(["a", "b", "c", "d", "e"])); */
+
+    function arraySwap(array) {
+      const temp = array[0];
+      array[0] = array[array.length - 1];
+      array[array.length - 1] = temp;
+
+      return array;
+    }
+    console.log(arraySwap(ara));
+  </script>
+</html>

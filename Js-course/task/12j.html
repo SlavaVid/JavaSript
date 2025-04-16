@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+  </head>
+  <body></body>
+  <script>
+    /* const multiply = (a, b) => a * b;
+
+    console.log(multiply(2, 3));
+    console.log(multiply(2, 30));
+*/
+    const countPositive = (array) => {
+      let count = 0;
+      array.forEach((value) => {
+        if (value > 0) {
+          count++;
+        }
+      });
+      return count;
+    };
+
+    console.log(countPositive([1, 5, -4, -4, 6]));
+  </script>
+</html>

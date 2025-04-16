@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="updateButton(); " class="button">Start</button>
+    <p></p>
+    <button onclick="cartUpdate();">Add to cart</button>
+    <p class="messageBoard"></p>
+  </body>
+  <script>
+    /*
+       const add = function () {
+         console.log(2 + 3);
+       };
+
+       add();
+       add();
+
+       function runTwice(fun) {
+         fun();
+         fun();
+       }
+      */
+
+    /*
+       runTwice(function () {
+         console.log("hello");
+       });
+       runTwice(add);
+      */
+    function updateButton() {
+      const button = document.querySelector(".button");
+      button.innerHTML = "Loading...";
+      setTimeout(function () {
+        button.innerHTML = "Finished";
+      }, 1000);
+    }
+
+    function cartUpdate() {
+      let timerId;
+      const message = document.querySelector(".messageBoard");
+      message.innerHTML = "Added";
+
+      clearTimeout(timerId);
+
+      timerId = setTimeout(function () {
+        message.innerHTML = "";
+      }, 2000);
+    }
+  </script>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body></body>
+
+  <script>
+    const coin = Math.random();
+    let result = "";
+    const guess = "Heads";
+    coin < 0.5 ? (result = "Heads") : (result = "Tails");
+    guess === result
+      ? console.log(`You won computer chose ${result}`)
+      : console.log(`You lose computer chose ${result}`);
+  </script>
+</html>

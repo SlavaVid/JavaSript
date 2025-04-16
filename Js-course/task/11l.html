@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body></body>
+
+  <script>
+    const arrayNum = [-5, -4, -3, -2, -1, 0, 21, 2, 3, 4];
+    /* мой вариант*/
+    function minMax(array) {
+      let min = array[0];
+      let max = array[0];
+      for (let i = 1; i < array.length; i++) {
+        if (array[i] > max) {
+          max = array[i];
+        }
+      }
+      for (let i = 1; i < array.length; i++) {
+        if (array[i] < min) {
+          min = array[i];
+        }
+      }
+      console.log(`min: ${min}, max: ${max}`);
+    }
+    /* вариант автора видео*/
+    function miniMax(nums) {
+      const result = {
+        min: nums[0],
+        max: nums[0],
+      };
+      for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+        if (value < result.min) {
+          result.min = value;
+        }
+        if (value > result.max) {
+          result.max = value;
+        }
+      }
+      return result;
+    }
+  </script>
+</html>

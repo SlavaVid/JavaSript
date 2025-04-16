@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    function removeEgg(foods) {
+      const result = [];
+      for (let i = 0; i < foods.length; i++) {
+        if (foods[i] !== "egg") {
+          result.push(foods[i]);
+        }
+      }
+      return result;
+    }
+    console.log(removeEgg(["egg", "ham", "egg", "cheese"]));
+  </script>
+</html>

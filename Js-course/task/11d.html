@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+    for (let i = 0; i <= 10; i = i + 2) {
+      console.log(i);
+    }
+
+    for (let i = 5; i >= 0; i -= 1) {
+      console.log(i);
+    }
+    let i = 0;
+    while (i <= 10) {
+      console.log(i);
+      i = i + 2;
+    }
+
+    let i = 5;
+    while (i >= 0) {
+      console.log(i);
+      i -= 1;
+    } 
+
+    
+    const numsIncr = [];
+    for (let i = 0; i < arrayNum.length; i++) {
+      numsIncr.push(arrayNum[i] + 1);
+    }
+    console.log(numsIncr);
+    */
+    const arrayNum = [1, 2, 3, 4];
+    function addOne(array) {
+      for (let i = 0; i < array.length; i++) {
+        array[i] = array[i] + 1;
+      }
+      return array;
+    }
+
+    console.log(addOne([4, -5, 6]));
+  </script>
+</html>

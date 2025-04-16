@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function removeEgg(foods) {
+      let eggsRemoved = 0; // Инициализация
+      return foods.filter((value) => {
+        if (value === "egg" && eggsRemoved < 2) {
+          eggsRemoved++;
+          return false; // Удаляем яйцо
+        }
+        return true; // Оставляем элемент
+      });
+    }
+
+    console.log(removeEgg(["egg", "ham", "egg", "egg", "cheese"]));
+  </script>
+</html>

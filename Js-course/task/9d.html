@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      placeholder="Enter your name"
+      class="js-input"
+      onkeydown="handleKeydown(event);"
+    />
+    <button onclick="naming();">Submit</button>
+    <p class="js-result"></p>
+    <script>
+      function handleKeydown(event) {
+        if (event.key === "Enter") {
+          naming();
+        }
+      }
+      function naming() {
+        let text = document.querySelector(".js-input").value;
+        document.querySelector(".js-result").innerHTML = `Your name is ${text}`;
+      }
+    </script>
+  </body>
+</html>

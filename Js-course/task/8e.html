@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    const basketball = {
+      name: "basketball",
+      price: 2095,
+    };
+
+    const football = {
+      name: "football",
+      price: 2095,
+    };
+
+    function isSameProduct(product1, product2) {
+      JSON.stringify(product1) === JSON.stringify(product2)
+        ? console.log(true)
+        : console.log(false);
+    }
+    isSameProduct(basketball, football);
+  </script>
+</html>

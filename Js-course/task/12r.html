@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RockPaperSick</title>
+    <link rel="stylesheet" href="tasksyles/12r.css" />
+  </head>
+
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-button js-rock-button">
+      <img src="taskimages/rock-emoji.png" class="move-icon" />
+    </button>
+
+    <button class="move-button js-paper-button">
+      <img src="taskimages/paper-emoji.png" class="move-icon" />
+    </button>
+
+    <button class="move-button js-scissors-button">
+      <img src="taskimages/scissors-emoji.png" class="move-icon" />
+    </button>
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button class="reset-score-button js-reset-score-button">
+      Reset Score
+    </button>
+    <button class="auto-play-button js-auto-play-button">Auto Play</button>
+
+    <script src="taskscripts/12r.js"></script>
+
+    <div class="confirmation-popup" hidden>
+      Are you sure?
+      <button onclick="confirmReset(true)" class="confirm-button">Yes</button>
+      <button onclick="confirmReset(false)" class="confirm-button">No</button>
+    </div>
+  </body>
+</html>

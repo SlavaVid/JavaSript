@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <button onclick="flipCoin('Heads');">Heads</button>
+    <button onclick="flipCoin('Tails');">Tails</button>
+    <button
+      onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      
+    "
+    >
+      Reset Score
+    </button>
+  </body>
+
+  <script>
+    let score = JSON.parse(localStorage.getItem("score")) || {
+      wins: 0,
+      losses: 0,
+      ties: 0,
+    };
+
+    function flipCoin(playerFlip) {
+      const computerMove = pickComputerMove();
+      let result = "";
+      if (playerFlip === "Heads") {
+        if (computerMove === "Heads") {
+          result = "Tie";
+        } else {
+          result = "Win";
+        }
+      }
+      if (playerFlip === "Tails") {
+        if (computerMove === "Tails") {
+          result = "Tie";
+        } else if (computerMove === "Heads") {
+          result = "Lose";
+        }
+      }
+
+      if (result === "Win") {
+        score.wins += 1;
+      } else if (result === "Lose") {
+        score.losses += 1;
+      } else if (result === "Tie") {
+        score.ties += 1;
+      }
+
+      localStorage.setItem("score", JSON.stringify(score));
+
+      alert(`You chose ${playerFlip}
+          computer chose ${computerMove} it is a ${result} 
+          Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    }
+    function pickComputerMove() {
+      const randomNumber = Math.random();
+      let computerMove = "";
+      if (randomNumber < 0.5) {
+        computerMove = "Heads";
+      } else {
+        computerMove = "Tails";
+      }
+
+      return computerMove;
+    }
+  </script>
+</html>
